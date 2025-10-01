@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>◆ とくぺい の ホームページ ◆</title>
+    <!-- Tailwind CSS CDN (レスポンシブ対応と土台のために使用) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 90年代初期のテーマ設定 */
+        :root {
+            --bg-color: #2e2e3f; /* 暗いネイビー */
+            --main-text-color: #00ff00; /* ネオングリーン */
+            --accent-color: #ff00ff; /* マゼンタ */
+            --link-color: #00ffff; /* シアン */
+        }
+        body {
+            /* 粗いテクスチャの背景を再現 */
+            background-color: var(--bg-color);
+            background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.07) 0px, rgba(255,255,255,.07) 1px, transparent 1px, transparent 10px);
+            color: var(--main-text-color);
+            font-family: 'Courier New', Courier, monospace;
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+        
+        /* ページ全体のコンテナ: 90年代風の固定幅＆中央寄せ */
+        .container-90s {
+            width: 90%;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 5px solid var(--accent-color);
+            padding: 15px;
+            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.7); /* ドロップシャドウで立体感 */
+            background-color: #000000;
+        }
+
+        /* リンクのスタイル */
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            text-shadow: 0 0 5px var(--link-color);
+        }
+        a:hover {
+            color: var(--accent-color);
+            text-shadow: 0 0 8px var(--accent-color);
+        }
+
+        /* 90年代のハイライトと見出し */
+        h1, h2, h3 {
+            color: var(--accent-color);
+            text-shadow: 2px 2px 0px #000000;
+            border-bottom: 3px dashed var(--main-text-color);
+            padding-bottom: 5px;
+            margin-top: 1.5rem;
+        }
+        h1 { font-size: 2.25rem; }
+        h2 { font-size: 1.75rem; }
+
+        /* BLINK風アニメーション */
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        .blink-text {
+            animation: blink 0.5s step-end infinite;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-90s">
+
+        <!-- タイトルエリア -->
+        <h1 class="text-center mb-4">
+            TOKUPEI's SECRET BASE - デジタル・サバイバー とくぺいの部屋
+        </h1>
+        <p class="text-center text-sm mb-6">
+            <span class="blink-text">★ Warning: Under Construction ★</span>
+        </p>
+
+        <hr class="border-t-2 border-main-text-color mb-6">
+
+        <!-- プロフィールと挨拶 -->
+        <section id="profile">
+            <h2 class="text-lg">■ とくぺい (Tokpei)</h2>
+            
+            <div class="flex flex-col md:flex-row gap-4 items-start mb-8">
+                
+                <!-- 現在の写真 (プレースホルダーで提供されたものに似せる) -->
+                <div class="flex-shrink-0 text-center">
+                    <img src="tokupei.jpg" 
+                         alt="現在のとくぺい氏の画像" 
+                         class="border-4 border-white shadow-2xl">
+                    <p class="text-xs mt-2 text-white"></p>
+                </div>
+
+                <!-- 経歴概要 -->
+                <div class="flex-grow">
+                    <p class="text-sm leading-relaxed">
+                        ようこそ、この電子空間の片隅へ！とくぺいです。
+                        地球の最も原始的な環境から、最先端のデジタル世界へと渡り歩いてきました。
+                        僕の人生は、**サバイバル**と**アルゴリズム**で出来ています。
+                    </p>
+                    <p class="text-sm mt-3 leading-relaxed">
+                        <span class="font-bold text-accent">【現在の肩書き】</span>
+                        日本在住のフリーランス・ソフトウェアエンジニア。
+                        好きな言語は Rust と、自給自足時代の身振り手振りです。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t-2 border-dashed border-main-text-color my-6">
+
+        <!-- 経歴セクション -->
+        <section id="history">
+            <h2 class="text-lg">■ 異色の経歴 - サバイバルからデジタルへ</h2>
+
+            <div class="space-y-6 text-sm">
+                
+                <!-- 0-3歳: アフリカ -->
+                <div class="p-4 border border-main-text-color shadow-lg bg-gray-900/50">
+                    <h3 class="font-bold text-lg mb-2 text-link-color">▼ Phase 1: アフリカの奥地 (0〜3歳)</h3>
+                    <div class="flex flex-col sm:flex-row gap-4 items-start">
+                         <!-- 出生児の写真 (白黒・解像度荒い) -->
+                        <div class="flex-shrink-0 text-center">
+                            <img src="birth.jpg" 
+                                alt="出生時の画像" 
+                                class="border-2 border-accent">
+                            <p class="text-xs mt-1 text-white"></p>
+                        </div>
+                        <p class="leading-relaxed">
+                            アフリカの光と土の中で生まれました。記憶は断片的ですが、この時期に培われた**原始的な感覚**が、のちのジャングルでの生活を支える基礎となりました。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3-18歳: 中国奥地 -->
+                <div class="p-4 border border-main-text-color shadow-lg bg-gray-900/50">
+                    <h3 class="font-bold text-lg mb-2 text-link-color">▼ Phase 2: 中国奥地のジャングル (3〜18歳)</h3>
+                    <p class="leading-relaxed">
+                        3歳から18歳までの15年間、中国の奥地にある人里離れたジャングルで、家族と共に**完全な自給自足生活**を送りました。学校はありません。学びは自然界の法則と、生き抜くための実践的な知識のみでした。ここで、システムとロジック（動物の行動、天候のパターン）を無意識に分析する能力が養われました。
+                    </p>
+                    <p class="mt-2 font-bold text-accent">
+                        キーワード: #自給自足 #ロジック解析 #自然のアルゴリズム
+                    </p>
+                </div>
+
+                <!-- 19歳〜現在: 日本 & エンジニア -->
+                <div class="p-4 border border-main-text-color shadow-lg bg-gray-900/50">
+                    <h3 class="font-bold text-lg mb-2 text-link-color">▼ Phase 3: 日本への上陸、そしてデジタル世界へ (19歳〜)</h3>
+                    <p class="leading-relaxed">
+                        19歳で初めて日本に来ました。ジャングルで培った**「未知の環境に適応し、効率的なシステムを構築する能力」**が、現代社会の**エンジニアリング**という仕事に完全にフィット。以来、その才能を活かし、様々な企業でインフラ構築やソフトウェア開発に従事しています。
+                    </p>
+                    <p class="mt-2 font-bold text-accent">
+                        キーワード: #適応力 #即戦力 #コードは世界の道具
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="border-t-2 border-dashed border-main-text-color my-6">
+
+        <!-- 90年代風フッター情報 -->
+        <div class="text-center mt-8">
+            <p class="text-xs mb-3 text-white">
+                最終更新日: 1999/12/31 (気分で更新します)
+            </p>
+            
+            <!-- アクセスカウンター (画像プレースホルダーで表現) -->
+            <p class="text-sm font-bold mb-4">
+                あなたは<img src="https://placehold.co/80x20/FF00FF/000000?text=99999" alt="カウンタ" class="inline align-middle">人目の訪問者です! 感謝!
+            </p>
+
+            <!-- 謎のリンク集 -->
+            <p class="text-center mt-6">
+                <a href="#">[友達のサイトへ]</a> | 
+                <a href="#">[BBS (電子掲示板) へ]</a> | 
+                <a href="#">[メールはこちら]</a>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
